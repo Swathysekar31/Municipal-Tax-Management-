@@ -1,0 +1,51 @@
+/* Global styles for text visibility */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #f8f9fa;
+    color: #2c3e50; /* Default dark text color */
+}
+
+/* Ensure all input text is visible */
+input, select, textarea {
+    color: #2c3e50 !important;
+    background-color: white !important;
+}
+
+input::placeholder {
+    color: #7f8c8d !important;
+}
+
+/* Force dark text in all containers */
+div, p, span, h1, h2, h3, h4, h5, h6 {
+    color: #2c3e50 !important;
+}
+
+/* Table text visibility */
+table {
+    color: #2c3e50 !important;
+}
+
+td, th {
+    color: inherit !important;
+}
+
+/* Card backgrounds should be white with dark text */
+.card, .auth-card, .users-table-container {
+    background: white !important;
+    color: #2c3e50 !important;
+}
+
+/* Modal visibility */
+.modal-content {
+    background: white !important;
+    color: #2c3e50 !important;
+}

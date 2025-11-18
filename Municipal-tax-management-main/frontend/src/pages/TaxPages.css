@@ -1,0 +1,535 @@
+.tax-page {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f8f9fa;
+    min-height: 100vh;
+}
+
+.tax-header {
+    background: white;
+    padding: 25px 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 25px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tax-header h1 {
+    color: #2c3e50;
+    margin: 0;
+    font-size: 28px;
+}
+
+.back-btn {
+    padding: 12px 25px;
+    background: linear-gradient(135deg, #6c757d, #5a6268);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(108, 117, 125, 0.3);
+}
+
+.tax-content {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* Penalty-related styles */
+.penalty-row {
+    background-color: #fff3cd !important;
+    border-left: 4px solid #ffc107;
+}
+
+.penalty-amount {
+    color: #dc3545;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.penalty-indicator {
+    color: #dc3545;
+    font-size: 16px;
+}
+
+.penalty-status {
+    margin-top: 5px;
+}
+
+.penalty-status small {
+    color: #dc3545;
+    font-weight: bold;
+    background: #f8d7da;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 10px;
+}
+
+.grace-period-info {
+    margin-top: 2px;
+}
+
+.grace-period-info small {
+    color: #6c757d;
+    font-size: 10px;
+}
+
+.summary-item.penalty {
+    background: #f8d7da;
+    border-left: 4px solid #dc3545;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.summary-item.penalty .penalty-amount {
+    color: #721c24;
+    font-weight: bold;
+}
+
+.amount-due.total {
+    font-size: 18px;
+    font-weight: bold;
+    color: #dc3545;
+}
+
+.details-card,
+.demand-card,
+.payment-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.details-card h2,
+.demand-card h2,
+.payment-card h3 {
+    color: #2c3e50;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+    font-size: 22px;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.detail-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #3498db;
+}
+
+.detail-item label {
+    font-weight: 600;
+    color: #6c757d;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.detail-item span {
+    color: #2c3e50;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.demand-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.demand-table th,
+.demand-table td {
+    padding: 15px 12px;
+    text-align: left;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.demand-table th {
+    background: #2c3e50;
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.demand-table tr:hover {
+    background: #f8f9fa;
+}
+
+.demand-table tr:last-child td {
+    border-bottom: none;
+}
+
+.status-badge {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.status-badge.pending {
+    background: #ffeaa7;
+    color: #e17055;
+}
+
+.status-badge.paid {
+    background: #55efc4;
+    color: #00b894;
+}
+
+.payment-summary {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.summary-details {
+    margin-bottom: 30px;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-bottom: 1px solid #e9ecef;
+    font-size: 16px;
+}
+
+.summary-item.total {
+    border-top: 2px solid #2c3e50;
+    border-bottom: none;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.amount-due, .balance-due {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+.amount-paid {
+    color: #27ae60;
+    font-weight: bold;
+}
+
+.pay-btn {
+    padding: 16px 45px;
+    background: linear-gradient(135deg, #27ae60, #219652);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(39, 174, 96, 0.3);
+}
+
+.pay-btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(39, 174, 96, 0.4);
+}
+
+.pay-btn:disabled {
+    background: #95a5a6;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    font-size: 18px;
+    color: #6c757d;
+    background: white;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+/* Property Tax Specific Styles */
+.property-tax-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.property-tax-column {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.property-tax-full-row {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 10px;
+    padding-top: 20px;
+    border-top: 2px solid #e9ecef;
+}
+
+/* Demand Table Styles */
+.demand-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    font-size: 14px;
+}
+
+.demand-table th,
+.demand-table td {
+    padding: 12px 8px;
+    text-align: left;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.demand-table th {
+    background: #2c3e50;
+    color: white;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.demand-table tr:hover {
+    background: #f8f9fa;
+}
+
+.demand-table tr:last-child td {
+    border-bottom: none;
+}
+
+.total-row {
+    background: #f8f9fa !important;
+    font-weight: bold;
+}
+
+.total-row td {
+    border-top: 2px solid #2c3e50;
+    background: #e9ecef;
+}
+
+/* Payment Buttons */
+.pay-half-btn {
+    padding: 6px 12px;
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 12px;
+    transition: all 0.3s ease;
+}
+
+.pay-half-btn:hover:not(:disabled) {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(52, 152, 219, 0.3);
+}
+
+.pay-half-btn:disabled {
+    background: #95a5a6;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.pay-btn {
+    padding: 16px 45px;
+    background: linear-gradient(135deg, #27ae60, #219652);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(39, 174, 96, 0.3);
+}
+
+.pay-btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(39, 174, 96, 0.4);
+}
+
+.pay-btn:disabled {
+    background: #95a5a6;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* Status Badges */
+.status-badge {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.status-badge.pending {
+    background: #ffeaa7;
+    color: #e17055;
+}
+
+.status-badge.paid {
+    background: #55efc4;
+    color: #00b894;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .property-tax-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .property-tax-full-row {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .demand-table {
+        font-size: 12px;
+    }
+    
+    .demand-table th,
+    .demand-table td {
+        padding: 8px 6px;
+    }
+}
+
+@media (max-width: 768px) {
+    .tax-header h1 {
+        font-size: 22px;
+    }
+    
+    .details-card h2,
+    .demand-card h2 {
+        font-size: 18px;
+    }
+    
+    .property-tax-grid {
+        gap: 15px;
+    }
+    
+    .detail-item {
+        padding: 12px;
+    }
+    
+    .demand-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
+
+/* Receipt Download Styles */
+.receipt-link {
+    color: #3498db;
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.receipt-link:hover {
+    color: #2980b9;
+}
+
+.download-receipt-btn {
+    padding: 6px 10px;
+    background: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: all 0.3s ease;
+}
+
+.download-receipt-btn:hover {
+    background: #219652;
+    transform: translateY(-1px);
+}
+
+.pay-quarter-btn {
+    padding: 6px 12px;
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 12px;
+    transition: all 0.3s ease;
+}
+
+.pay-quarter-btn:hover:not(:disabled) {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(52, 152, 219, 0.3);
+}
+
+.payment-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Add this to your TaxPages.css file */
+
+.pay-btn, .pay-quarter-btn, .pay-half-btn {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.pay-btn:hover, .pay-quarter-btn:hover, .pay-half-btn:hover {
+  background-color: #218838;
+}
+
+.pay-btn:disabled, .pay-quarter-btn:disabled, .pay-half-btn:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}

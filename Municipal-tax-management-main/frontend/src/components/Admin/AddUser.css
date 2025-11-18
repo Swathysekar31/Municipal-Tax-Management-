@@ -1,0 +1,122 @@
+.add-user-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 40px 20px;
+}
+
+.add-user-card {
+    background: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 800px;
+    margin-top: 30px;
+}
+
+.add-user-card h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #2c3e50;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.add-user-card h3 {
+    color: #667eea;
+    font-size: 1.2rem;
+    margin: 25px 0 10px 0;
+    border-left: 4px solid #667eea;
+    padding-left: 10px;
+}
+
+/* Form styling */
+.add-user-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem 1.5rem;
+}
+
+.add-user-form input,
+.add-user-form select {
+    padding: 12px 15px;
+    border: 2px solid #e1e5e9;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background: #fff;
+    color: #2c3e50;
+    font-weight: 500;
+    width: 100%;
+}
+
+.add-user-form input:focus,
+.add-user-form select:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.add-user-form input::placeholder {
+    color: #7f8c8d;
+    font-weight: 400;
+}
+
+/* Labels */
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #2c3e50;
+    font-size: 14px;
+}
+
+/* Submit button */
+.add-user-form button {
+    grid-column: span 2;
+    padding: 15px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.add-user-form button:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.add-user-form button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .add-user-card {
+        padding: 25px;
+        margin-top: 10px;
+    }
+
+    .add-user-form {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .add-user-card h2 {
+        font-size: 1.6rem;
+    }
+}
